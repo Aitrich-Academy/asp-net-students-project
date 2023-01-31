@@ -1,9 +1,0 @@
-D:\rekha\PROJECT\FoodSpot\BLL\bin\Debug\BLL.dll
-D:\rekha\PROJECT\FoodSpot\BLL\bin\Debug\BLL.pdb
-D:\rekha\PROJECT\FoodSpot\BLL\bin\Debug\DAL.dll
-D:\rekha\PROJECT\FoodSpot\BLL\bin\Debug\DAL.pdb
-D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
-D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.csproj.CopyComplete
-D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.dll
-D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.pdb

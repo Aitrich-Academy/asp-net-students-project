@@ -1,6 +1,0 @@
-D:\rekha\PROJECT\FoodSpot\DAL\bin\Debug\DAL.dll
-D:\rekha\PROJECT\FoodSpot\DAL\bin\Debug\DAL.pdb
-D:\rekha\PROJECT\FoodSpot\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-D:\rekha\PROJECT\FoodSpot\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-D:\rekha\PROJECT\FoodSpot\DAL\obj\Debug\DAL.dll
-D:\rekha\PROJECT\FoodSpot\DAL\obj\Debug\DAL.pdb
