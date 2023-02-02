@@ -18,11 +18,13 @@
 
 
 
-    <table style="width:80%;">
+   <table style="width:80%;">
+        <tr><td>
+            <asp:Label ID="lbl_message" runat="server" Font-Size="Large" ForeColor="#33CC33"></asp:Label></td></tr>
         <tr><td>
             <asp:GridView ID="grd_Restaurants" runat="server" AutoGenerateColumns="False" 
                 BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px"
-                DataKeyNames="Rest_Id" CellPadding="4">
+                DataKeyNames="Rest_Id" CellPadding="4" OnRowDataBound="grd_Restaurants_RowDataBound1">
                 <Columns>
                     <asp:BoundField DataField="Rest_Name" HeaderText="Name" SortExpression="Rest_Name" />
                     <asp:BoundField DataField="Rest_Phone" HeaderText="Phone" SortExpression="Rest_Phone" />
@@ -31,6 +33,7 @@
                     <asp:BoundField DataField="Available_Time" HeaderText="Time" SortExpression="Available_Time" />
                     <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                     <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                    <asp:BoundField DataField="Rest_Status" SortExpression ="status" />
                     <asp:TemplateField HeaderText="Edit">
                         <ItemTemplate>
        <asp:ImageButton ID="ImgEdit" runat="server" ImageUrl="../Images/editimage.jpg" CssClass="Areaeditimage" OnClick="ImgEdit_Click"/>
@@ -46,7 +49,7 @@
                     </asp:TemplateField>
                      <asp:TemplateField HeaderText="Active">
                         <ItemTemplate>
-                            <asp:CheckBox ID="chk_active" runat="server" />
+                            <asp:CheckBox ID="chk_active" runat="server" AutoPostBack="True" OnCheckedChanged="chk_active_CheckedChanged" />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

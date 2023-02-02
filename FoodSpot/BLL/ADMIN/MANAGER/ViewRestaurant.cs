@@ -49,7 +49,7 @@ namespace BLL.ADMIN.MANAGER
         public void SelectById()
         {
             S_List.Clear();
-            S_List.Add("Id",prop.ID);
+            S_List.Add("Id", prop.ID);
 
 
             DataTable dt = new DataTable();
@@ -60,7 +60,7 @@ namespace BLL.ADMIN.MANAGER
                 prop.phone = dt.Rows[0].ItemArray[2].ToString();
                 prop.email = dt.Rows[0].ItemArray[3].ToString();
                 prop.location = dt.Rows[0].ItemArray[4].ToString();
-                prop.AvTime=dt.Rows[0].ItemArray[5].ToString();
+                prop.AvTime = dt.Rows[0].ItemArray[5].ToString();
                 prop.password = dt.Rows[0].ItemArray[6].ToString();
                 prop.Address = dt.Rows[0].ItemArray[7].ToString();
                 prop.Description = dt.Rows[0].ItemArray[8].ToString();
@@ -83,6 +83,32 @@ namespace BLL.ADMIN.MANAGER
             S_List.Add("descript", prop.Description);
             string result = Db_Obj.executeprocedure(S_List, "sp_UpdateRestaurant");
             return result;
+        }
+
+        public string UpdateStatus()
+        {
+            S_List.Clear();
+            S_List.Add("id", prop.ID);
+            string result = Db_Obj.executeprocedure(S_List, "sp_RestaurantStatus");
+            return result;
+
+        }
+
+        public void SelectMailReceiv()
+        {
+            S_List.Clear();
+            S_List.Add("id", prop.ID);
+            DataTable dt = new DataTable();
+
+            dt = Db_Obj.getdatatable(S_List, "sp_selectmailid");
+            if (dt.Rows.Count > 0)
+            {
+                prop.Name = dt.Rows[0].ItemArray[0].ToString();
+                prop.email = dt.Rows[0].ItemArray[1].ToString();
+                prop.password = dt.Rows[0].ItemArray[2].ToString();
+
+            }
+
         }
 
     }
