@@ -43,7 +43,15 @@
   <ItemGroup>
     <Compile Include="ADMIN\MANAGER\ViewRestaurant.cs" />
     <Compile Include="ADMIN\PROPERTY\RestaurantProperty.cs" />
+    <Compile Include="CATEGORY\Manager\CategoryManager.cs" />
+    <Compile Include="CATEGORY\Property\CategoryProperty.cs" />
+    <Compile Include="ITEMS\Manager\ItemManager.cs" />
+    <Compile Include="ITEMS\Property\CategoryProperty.cs" />
+    <Compile Include="ITEMS\Property\ItemProperty.cs" />
+    <Compile Include="ITEMS\Property\RestaurantProperty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="USER\Manager\UserRegManager.cs" />
+    <Compile Include="USER\Property\UserRegProperty.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
