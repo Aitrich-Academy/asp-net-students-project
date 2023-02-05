@@ -120,7 +120,7 @@ namespace FoodSpot.ADMIN
             }
             catch (Exception ex)
             {
-                lbl_message.Text = "Failed";
+                lbl_message.Text = "mail send Failed";
             }
             finally
             {
