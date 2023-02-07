@@ -6,6 +6,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.IO;
 using System.Collections;
+using System.Net.Mail;
+using System.Net;
 
 namespace project
 {
@@ -81,6 +83,27 @@ namespace project
             return cmd.ExecuteNonQuery();
         }
 
+        public void MailSending(string mailid, AlternateView av)
+        {
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress("anshid.ansar@gmail.com");
+                mail.To.Add(mailid);
+                mail.Subject = "Food Spot";
+
+                mail.AlternateViews.Add(av);
+
+                mail.IsBodyHtml = true;
+
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("anshidansar007", "ngvrpntimlvnmgik");
+                    smtp.EnableSsl = true;
+                    smtp.Send(mail);
+                }
+
+            }
+        }
         public string  executeprocedure(SortedList list, string query)
         {
             //object obj = new object();
