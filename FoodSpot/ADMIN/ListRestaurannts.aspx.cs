@@ -9,6 +9,7 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Mime;
 
 namespace FoodSpot.ADMIN
 {
@@ -80,38 +81,40 @@ namespace FoodSpot.ADMIN
 
         protected void chk_active_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox chk = (CheckBox)sender;
-            GridViewRow dr = chk.NamingContainer as GridViewRow;
-
-            int id = Convert.ToInt32(grd_Restaurants.DataKeys[dr.RowIndex].Value);
-
-            obj.prop.ID = id;
-            obj.SelectMailReceiv();
-
-            using (MailMessage mail = new MailMessage())
+            try
             {
-                mail.From = new MailAddress("anshid.ansar@gmail.com");
-                mail.To.Add(obj.prop.email);
-                mail.Subject = "Food Spot";
-                mail.Body = "<h1>Welcome to FoodSpot</h1>\n<h3>Hai " + obj.prop.Name + "  </h3>\n<h5>Your account is activated.Your password is " + obj.prop.password + "</h5>";
-                mail.IsBodyHtml = true;
-                // mail.Attachments.Add(new Attachment("C:\\file.zip"));
+                CheckBox chk = (CheckBox)sender;
+                GridViewRow dr = chk.NamingContainer as GridViewRow;
 
-                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
-                {
-                    smtp.Credentials = new NetworkCredential("anshidansar007", "ngvrpntimlvnmgik");
-                    smtp.EnableSsl = true;
-                    smtp.Send(mail);
-                }
+                int id = Convert.ToInt32(grd_Restaurants.DataKeys[dr.RowIndex].Value);
 
+                obj.prop.ID = id;
+                obj.SelectMailReceiv();
+
+
+                string path = Server.MapPath(@"/Images/RestImage.jpg");
+                obj.FunctionForMail(path);
+
+               
+                string stat = obj.UpdateStatus();
+                lbl_message.Visible = true;
+                lbl_message.Text = "Mail sent to " + obj.prop.Name;
+                Session["mysession"] = obj.prop.Name;
+                // ClientScript.RegisterStartupScript(GetType(), "alert", "alert('Message has been sent successfully.');", true);
             }
+            catch (Exception ex)
+            {
+                lbl_message.Text = "mail send Failed";
+            }
+            finally
+            {
 
-            string stat = obj.UpdateStatus();
-            lbl_message.Visible = true;
-            lbl_message.Text = "Mail sent to " + obj.prop.Name;
-            BindGrid();
+                BindGrid();
+            }
+          
         }
 
+        
 
     }
 }
