@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Mail;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using BLL.ADMIN.PROPERTY;
+using BLL.Services;
 using project;
 
 namespace BLL.ADMIN.MANAGER
@@ -93,7 +96,30 @@ namespace BLL.ADMIN.MANAGER
             return result;
 
         }
-
+        public void FunctionForMail(string path)
+        {
+            MailServices emailService = new MailServices();
+            emailService.MailSending(prop.email, Mail_Body(path));
+        }
+        private AlternateView Mail_Body(string path)
+        {
+            LinkedResource Img = new LinkedResource(path, MediaTypeNames.Image.Jpeg);
+            Img.ContentId = "MyImage";
+            string str = @"  
+            <table width='100%'>  <tr><td><h1>Welcome to FoodSpot</h1></td></tr>
+            <tr>  <td align=""center"" style=""padding:40px 0 30px 0;""> 
+            <a href='https://www.swiggy.com/'>
+            <img src=cid:MyImage  id='img' alt='' width=""840px"" height=""300px""/>  </a>  </td>   </tr>
+                <tr>  
+                    <td><h3>Hai  '" + prop.Name + "' </h3>\n<h5>Your account is activated.Your password is '" + prop.password + @"'</h5> 
+                    </td>  
+                </tr>  
+               </table>  
+            ";
+            AlternateView AV = AlternateView.CreateAlternateViewFromString(str, null, MediaTypeNames.Text.Html);
+            AV.LinkedResources.Add(Img);
+            return AV;
+        }
         public void SelectMailReceiv()
         {
             S_List.Clear();
