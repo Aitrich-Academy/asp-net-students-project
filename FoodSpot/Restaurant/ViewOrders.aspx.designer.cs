@@ -7,48 +7,75 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Food_Mgmt_System
+namespace FoodSpot.Restaurant
 {
 
 
-    public partial class itemsList
+    public partial class ViewOrders
     {
 
         /// <summary>
-        /// Label5 control.
+        /// Label12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
-        /// DropDownListCategory control.
+        /// GridViewBookings control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListCategory;
+        protected global::System.Web.UI.WebControls.GridView GridViewBookings;
 
         /// <summary>
-        /// Label1 control.
+        /// HiddenFieldCustomerDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.HiddenField HiddenFieldCustomerDetails;
 
         /// <summary>
-        /// TextBoxName control.
+        /// LabelMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxName;
+        protected global::System.Web.UI.WebControls.Label LabelMsg;
+
+        /// <summary>
+        /// HF_itemslist control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField HF_itemslist;
+
+        /// <summary>
+        /// panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panel1;
+
+        /// <summary>
+        /// Label13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
         /// Label2 control.
@@ -60,84 +87,111 @@ namespace Food_Mgmt_System
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// TextBoxPrice control.
+        /// Labelname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxPrice;
+        protected global::System.Web.UI.WebControls.Label Labelname;
 
         /// <summary>
-        /// Label3 control.
+        /// Label10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
-        /// FileUpload1 control.
+        /// LabelPhone0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.Label LabelPhone0;
 
         /// <summary>
-        /// Label4 control.
+        /// Label9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label Label9;
 
         /// <summary>
-        /// TextBoxDescription control.
+        /// Labeladress0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxDescription;
+        protected global::System.Web.UI.WebControls.Label Labeladress0;
 
         /// <summary>
-        /// Labelmsg control.
+        /// Label8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Labelmsg;
+        protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
-        /// HiddenField1 control.
+        /// Labelemail0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField HiddenField1;
+        protected global::System.Web.UI.WebControls.Label Labelemail0;
 
         /// <summary>
-        /// ButtonSave control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonSave;
+        protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// GridView1 control.
+        /// Labelpincode0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label Labelpincode0;
+
+        /// <summary>
+        /// btnViewDetails2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnViewDetails2;
+
+        /// <summary>
+        /// LblItemsListHeading control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblItemsListHeading;
+
+        /// <summary>
+        /// GV_ItemListing control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GV_ItemListing;
     }
 }
