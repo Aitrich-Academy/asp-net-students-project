@@ -14,6 +14,7 @@ namespace FoodSpot.Login
         protected void Page_Load(object sender, EventArgs e)
         {
 
+           
         }
         public void RoleSelect()
         {
@@ -49,7 +50,7 @@ namespace FoodSpot.Login
             {
                 Session["Email"] = txtemail.Text;
 
-                Response.Redirect("~/WebForm3.aspx");
+                Response.Redirect("~/ADMIN/AddRestaurant.aspx");
             }
             else
             {

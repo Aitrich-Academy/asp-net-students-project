@@ -64,7 +64,7 @@ namespace BLL.Admin
             S1.Clear();
             S1.Add("id", UsrRegPro_Obj.Cust_Id);
             DataTable dt = new DataTable();
-            dt = Db_Obj.getdattatable(S1, "selectuserbyid");
+            dt = Db_Obj.getdatatable(S1, "selectuserbyid");
             if (dt.Rows.Count > 0)
             {
                 UsrRegPro_Obj.Cust_Name = dt.Rows[0].ItemArray[0].ToString();

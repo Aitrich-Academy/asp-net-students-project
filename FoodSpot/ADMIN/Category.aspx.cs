@@ -1,16 +1,19 @@
-﻿using System;
-using BLL.CATEGORY.Manager;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
+
+
+using BLL.ADMIN.MANAGER;
+using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace FoodManage
+
+
+namespace FoodSpot.ADMIN
 {
     public partial class Category : System.Web.UI.Page
     {
-        CategoryManager CatMan_obj = new CategoryManager();
+
+        CatManager CatMan_obj = new CatManager();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Page.IsPostBack == false)
@@ -19,11 +22,27 @@ namespace FoodManage
             }
         }
 
+        protected void ImageButtonEdit_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton bTN = sender as ImageButton;
+            GridViewRow gRDrow = bTN.NamingContainer as GridViewRow;
+            HiddenFieldCatId.Value = GridViewCat.DataKeys[gRDrow.RowIndex].Value.ToString();
+            SelectCatById();
+        }
+
+        protected void ImageButtonDelete_Click(object sender, ImageClickEventArgs e)
+        {
+            ImageButton bTN = sender as ImageButton;
+            GridViewRow gRDrow = bTN.NamingContainer as GridViewRow;
+            HiddenFieldCatId.Value = GridViewCat.DataKeys[gRDrow.RowIndex].Value.ToString();
+            CategoryDelete();
+        }
+
         protected void Button1Save_Click(object sender, EventArgs e)
         {
-            if(CatName.Text!="")
+            if (CatName.Text != "")
             {
-                if(HiddenFieldCatId.Value=="-1")
+                if (HiddenFieldCatId.Value == "-1")
                 {
                     CategoryInsert();
                 }
@@ -67,21 +86,12 @@ namespace FoodManage
             GridViewCat.DataSource = CatMan_obj.SelectAllCategory();
             GridViewCat.DataBind();
         }
-
-        
-        protected void ImageButtonEdit_Click(object sender, ImageClickEventArgs e)
-        {
-            ImageButton bTN = sender as ImageButton;
-            GridViewRow gRDrow = bTN.NamingContainer as GridViewRow;
-            HiddenFieldCatId.Value = GridViewCat.DataKeys[gRDrow.RowIndex].Value.ToString();
-            SelectCatById();
-        }
         public void SelectCatById()
         {
             CatMan_obj.Cat_pro.Cat_Id = int.Parse(HiddenFieldCatId.Value);
             CatMan_obj.SelectCat();
             CatName.Text = CatMan_obj.Cat_pro.Cat_Name;
-            
+
         }
         public void CategoryUpdate()
         {
@@ -112,13 +122,6 @@ namespace FoodManage
             }
             CategoryBind();
         }
-        protected void ImageButtonDelete_Click(object sender, ImageClickEventArgs e)
-        {
-            ImageButton bTN = sender as ImageButton;
-            GridViewRow gRDrow = bTN.NamingContainer as GridViewRow;
-            HiddenFieldCatId.Value = GridViewCat.DataKeys[gRDrow.RowIndex].Value.ToString();
-            CategoryDelete();
-        }
         public void CategoryDelete()
         {
             CatMan_obj.Cat_pro.Cat_Id = int.Parse(HiddenFieldCatId.Value);
@@ -142,5 +145,5 @@ namespace FoodManage
             CategoryBind();
         }
     }
-    
+
 }

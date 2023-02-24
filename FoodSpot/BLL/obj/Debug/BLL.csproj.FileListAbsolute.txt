@@ -7,3 +7,12 @@ D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.dll
 D:\rekha\PROJECT\FoodSpot\BLL\obj\Debug\BLL.pdb
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\bin\Debug\BLL.dll
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\bin\Debug\BLL.pdb
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\bin\Debug\DAL.dll
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\bin\Debug\DAL.pdb
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\obj\Debug\BLL.dll
+C:\Users\SHAFEEQ\Desktop\newclone\asp-net-students-project-batch1\FoodSpot\BLL\obj\Debug\BLL.pdb

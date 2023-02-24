@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.CATEGORY.Property
+namespace BLL.ADMIN.PROPERTY
 {
     public class CategoryProperty
     {
