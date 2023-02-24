@@ -54,7 +54,7 @@
             <br />
             <br />
                
-            <asp:DataList ID="DataList1" runat="server" RepeatColumns="8">
+            <asp:DataList ID="DataList1" runat="server" RepeatColumns="8" Width="1191px">
 
 
             <ItemTemplate><div class="container">

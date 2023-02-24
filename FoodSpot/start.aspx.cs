@@ -41,7 +41,8 @@ namespace FoodSpot
             var hfield = dataListItem.FindControl("hfield") as HiddenField;
             string s1 = hfield.Value;
             srt.prop.ID = int.Parse(s1);
-            Response.Redirect("menu.aspx?id=" + s1);
+            //Response.Redirect("menu.aspx?id=" + s1);
+            Response.Redirect("webform1.aspx?id=" + s1);
         }
 
         
