@@ -48,6 +48,5 @@ namespace BLL.Admin.Property
 
         public string CheckBoxCancel { get; set; }
 
-       
     }
 }

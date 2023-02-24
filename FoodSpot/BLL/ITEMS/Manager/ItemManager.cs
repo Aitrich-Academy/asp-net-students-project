@@ -16,6 +16,7 @@ namespace BLL.Admin.Manager
 {
     public class ItemManager
     {
+
         DBhelper DB_Obj = new DBhelper();
         public ItemProperty itemProp_Obj = new ItemProperty();
         public CategoryProperty catProp_obj = new CategoryProperty();
