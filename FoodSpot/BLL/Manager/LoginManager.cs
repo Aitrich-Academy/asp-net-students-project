@@ -27,5 +27,22 @@ namespace BLL.Manager
                 return dbh.executeprocedure(S1, "roleselect");
             }
 
+            public string Usernameselect()
+            {
+                S1.Clear();
+                S1.Add("email", logpro.E_Mail);
+                S1.Add("password", logpro.Password);
+                return dbh.executeprocedure(S1, "usernameselect");
+            }
+
+       
+            public string selectlogid()
+            {
+                S1.Clear();
+                S1.Add("email", logpro.E_Mail);
+                S1.Add("password", logpro.Password);
+                return dbh.executeprocedure(S1, "selectlogid");
+            }
+
     }
 }

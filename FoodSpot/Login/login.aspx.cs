@@ -20,11 +20,17 @@ namespace FoodSpot.Login
             lmg.logpro.E_Mail = txtemail.Text.Trim().ToString();
             lmg.logpro.Password = txtpassword.Text.Trim().ToString();
             string result = lmg.Roleselect();
+            lmg.logpro.log_Id = int.Parse(lmg.selectlogid());
+
+            Session["custid"] = lmg.selectlogid();
+
             if (result == "U")
             {
-                Session["Email"] = txtemail.Text;
-                Response.Redirect("~/HomePage.aspx");
-
+                Session["User"] = txtemail.Text;
+                
+                lmg.logpro.Username = lmg.Usernameselect();
+                Session["Username"] = lmg.logpro.Username;
+                Response.Redirect("~/start.aspx");
             }
             else if (result == "R")
             {

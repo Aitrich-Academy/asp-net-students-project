@@ -1,17 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="FoodSpot.Site1" %>
 
-<!DOCTYPE html>
-
-<html>
-<head runat="server">
-    <title>     <meta charset="utf-8">
-        <title>Burger King - Food Website Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description"></title>  
-    <style>/*******************************/
-/********* General CSS *********/
-/*******************************/
 body {
     color: #757575;
     background: #ffffff;
@@ -225,6 +212,155 @@ a:focus {
 
 
 /*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 400px;
+    background: #ffffff;
+}
+
+.carousel .container-fluid {
+    padding: 0;
+}
+
+.carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carousel .carousel-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    overflow: hidden;
+}
+
+.carousel .carousel-img::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.carousel .carousel-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .carousel-text {
+    position: absolute;
+    max-width: 700px;
+    height: calc(100vh - 35px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.carousel .carousel-text h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.carousel .carousel-text h1 span {
+    color: #fbaf32;
+}
+
+.carousel .carousel-text p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.carousel .carousel-btn .btn:last-child {
+    margin-left: 10px;
+    background: #719a0a;
+    border-color: #719a0a;
+}
+
+.carousel .carousel-btn .btn:last-child:hover {
+    color: #719a0a;
+    background: transparent;
+}
+
+.carousel .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@media (max-width: 991.98px) {
+    .carousel,
+    .carousel .carousel-item,
+    .carousel .carousel-text {
+        height: calc(100vh - 105px);
+    }
+    
+    .carousel .carousel-text h1 {
+        font-size: 35px;
+    }
+    
+    .carousel .carousel-text p {
+        font-size: 16px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 12px 30px;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel,
+    .carousel .carousel-item,
+    .carousel .carousel-text {
+        height: calc(100vh - 70px);
+    }
+    
+    .carousel .carousel-text h1 {
+        font-size: 30px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel .carousel-text h1 {
+        font-size: 25px;
+    }
+    
+    .carousel .carousel-text .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+}
+
+
+/*******************************/
 /******* Page Header CSS *******/
 /*******************************/
 .page-header {
@@ -325,6 +461,86 @@ a:focus {
         font-weight: 600;
     }
 }
+
+
+/*******************************/
+/********* Booking CSS *********/
+/*******************************/
+.booking {
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+    background: rgba(0, 0, 0, .04);
+}
+
+.booking .booking-content {
+    padding: 45px 0 15px 0;
+}
+
+.booking .booking-content .section-header {
+    margin-bottom: 30px;
+}
+
+.booking .booking-form {
+    padding: 60px 30px;
+    background: #fbaf32;
+}
+
+.booking .booking-form .control-group {
+    margin-bottom: 15px;
+}
+
+.booking .booking-form .input-group-text {
+    position: absolute;
+    padding: 0;
+    border: none;
+    background: none;
+    top: 15px;
+    right: 15px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.booking .booking-form .form-control {
+    height: 45px;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 15px;
+    border-radius: 5px !important;
+    border: 1px solid #ffffff;
+    background: transparent;
+}
+
+.booking .booking-form select.form-control {
+    padding: 0 10px;
+}
+
+.booking .booking-form .form-control::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.booking .booking-form .form-control:-ms-input-placeholder,
+.booking .booking-form .form-control::-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.booking .booking-form .input-group [data-toggle="datetimepicker"] {
+    cursor: default;
+}
+
+.booking .booking-form .btn.custom-btn {
+    width: 100%;
+    color: #fbaf32;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.booking .booking-form .btn.custom-btn:hover {
+    color: #ffffff;
+    background: transparent;
+}
+
 
 /*******************************/
 /********** Menu CSS ***********/
@@ -1745,320 +1961,3 @@ a:focus {
 .footer .copyright p a:hover {
     color: #719a0a;
 }
-</style>
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
-
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
-        
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-        <!-- Template Stylesheet -->
-        <link href="C:\Users\hp\Desktop\Mini\asp-net-students-project\FoodSpot\style.css" rel="stylesheet">
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
-<body>
-    <form id="form1" runat="server"><div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Food<span>Spot</span></a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="Home.aspx" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">Sign Up</a>
-                        <a href="login.aspx" class="nav-item nav-link">Log In</a>
-                        
-                     
-                        
-                            </div>
-                        </div>
-                     
-                    </div>
-                </div>
-         <%--   </div>
-        </div>--%>
-
-        
-   
-        
-        <!-- Food Start -->
-        <div class="food">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-4">
-                        <div class="food-item">
-                            <i class="flaticon-burger"></i>
-                            <h2>Breakfast</h2>
-                            <p>
-                                “All happiness depends on a leisurely breakfast.”
-
-<br> ‒ John Gunther.
-                            </p>
-                            <a href="">View Menu</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="food-item">
-                            <i class="flaticon-snack"></i>
-                            <h2>Lunch</h2>
-                            <p>
-                                “A good lunch break should be long enough to forget why you’re on it.” <br>– Doug Larson<br><br>
-
-                            <a href="">View Menu</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="food-item">
-                            <i class="flaticon-cocktail"></i>
-                            <h2>Snacks</h2>
-                            <p>
-                                I don't go long without eating. I never starve myself: I grab a healthy snack.<br>
-
--Vanessa Hudgens<br>
-
-
-                            </p>
-                            <a href="">View Menu</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="food-item">
-                            <i class="flaticon-cocktail"></i>
-                            <h2>Dinner</h2>
-                            <p>
-                                “Givers of great dinners know few enemies.” <br> - Martial
-                                <br>
-                            </p>
-                            <a href="">View Menu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        
-    
-       
-        <!-- Contact Start -->
-        <div class="contact">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Contact Us</p>
-                    <h2>Contact For Any Query</h2>
-                </div>
-                <div class="row align-items-center contact-information">
-                    <div class="col-md-6 col-lg-3">
-                        <div class="contact-info">
-                            <div class="contact-icon">
-                                <i class="fa fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Address</h3>
-                                <p>123 Street, NY, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="contact-info">
-                            <div class="contact-icon">
-                                <i class="fa fa-phone-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Call Us</h3>
-                                <p>+012 345 6789</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="contact-info">
-                            <div class="contact-icon">
-                                <i class="fa fa-envelope"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Email Us</h3>
-                                <p>info@example.com</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <div class="contact-info">
-                            <div class="contact-icon">
-                                <i class="fa fa-share"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h3>Follow Us</h3>
-                                <div class="contact-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-youtube"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row contact-form">
-                    <div class="col-md-6">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1600663868074!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div>
-                    <div class="col-md-6">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn custom-btn" type="submit" id="sendMessageButton">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
-
-
-        <!-- Blog Start -->
-        <div class="blog">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Food Blog</p>
-                    <h2>Latest From Food Blog</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/lori508m4xps01tnywxf" alt="Blog">
-                            </div>
-                            <div class="blog-content">
-                                <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Food</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte
-                                    </p>
-                                    <a class="btn custom-btn" href="">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/dpqcjrxwruipnt1wyqnh" alt="Blog">
-                            </div>
-                            <div class="blog-content">
-                                <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Food</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte
-                                    </p>
-                                    <a class="btn custom-btn" href="">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog End -->
-
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
-                <!-- Footer Start -->
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="footer-contact">
-                                    <h2>Our Address</h2>
-                                    <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                                    <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                    <p><i class="fa fa-envelope"></i>info@example.com</p>
-                                    <div class="footer-social">
-                                        <a href=""><i class="fab fa-twitter"></i></a>
-                                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a href=""><i class="fab fa-youtube"></i></a>
-                                        <a href=""><i class="fab fa-instagram"></i></a>
-                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="footer-link">
-                                    <h2>Quick Links</h2>
-                                    <a href="">Terms of use</a>
-                                    <a href="">Privacy policy</a>
-                                    <a href="">Cookies</a>
-                                    <a href="">Help</a>
-                                    <a href="">FQAs</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="footer-newsletter">
-                            <h2>Newsletter</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
-                            </p>
-                            <div class="form">
-                                <input class="form-control" placeholder="Email goes here">
-                                <button class="btn custom-btn">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="container">
-                    <p>Copyright &copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
-                    <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-    </form>
-</body>
-</html>
