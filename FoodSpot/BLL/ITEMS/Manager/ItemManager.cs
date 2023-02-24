@@ -30,6 +30,7 @@ namespace BLL.Admin.Manager
             dt = DB_Obj.getdatatable(s1,"sp_selectAllBookings");
             List<ItemProperty> list = new List<ItemProperty>();
 
+
             foreach(DataRow dr in dt.Rows)
             {
                 list.Add(new ItemProperty
