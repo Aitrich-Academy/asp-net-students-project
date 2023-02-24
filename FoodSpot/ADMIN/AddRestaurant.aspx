@@ -83,6 +83,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <br />
     <table style="width:90%;">
         <tr><td class="auto-style3">
             <asp:Label ID="Label4" runat="server" Font-Size="Larger" ForeColor="#660066" Text="Restaurant Registration" Font-Bold="True" Font-Underline="True"></asp:Label>

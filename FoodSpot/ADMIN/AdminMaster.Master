@@ -15,20 +15,31 @@
             margin-left: 39px;
         }
         .auto-style2 {
+            margin-left: 114px;
+        }
+        .auto-style3 {
             margin-left: 0px;
+            vertical-align:central;
         }
     </style>
-   
+   <script type="text/javascript">
+       window.history.forward();
+       function ImageButton1_Click() {
+           window.history.forward(-1);
+       }
+   </script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <div>
-                <asp:Image ID="Image1" runat="server" Height="244px" ImageUrl="~/Images/delivery-service-urban-landscape-phone-screen-young-man-courier-delivering-pizza_213110-1440.jpg" Width="100%" />
+                <asp:Image ID="Image1" runat="server" Height="278px" ImageUrl="~/Images/delivery-service-urban-landscape-phone-screen-young-man-courier-delivering-pizza_213110-1440.jpg" Width="100%" />
                 <br />
                     <asp:LinkButton ID="lnk1" runat="server" BorderStyle="Groove" Font-Size="Large" Font-Underline="False" Height="21px" PostBackUrl="~/ADMIN/AddRestaurant.aspx" Width="114px" CssClass="auto-style2">Add Restaurant</asp:LinkButton>
                    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:LinkButton ID="lnk2" runat="server" BorderStyle="Groove" Font-Overline="False" Font-Size="Large" Height="21px" PostBackUrl="~/ADMIN/ListRestaurannts.aspx" Width="130px">View Restaurants</asp:LinkButton> <asp:LinkButton ID="lnk3" runat="server" BorderStyle="Groove" Font-Overline="False" Font-Size="Large" Height="21px" PostBackUrl="~/ADMIN/Category.aspx" Width="132px" CssClass="auto-style1">Manage Category</asp:LinkButton> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:ImageButton ID="ImageButton1" runat="server" CssClass="auto-style3" Height="21px" ImageUrl="~/Images/19-194832_oojs-ui-icon-logout-ltr-progressive-blue-logout.png" OnClick="ImageButton1_Click" ToolTip="LogOut ??? :(" Width="29px" />
             </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

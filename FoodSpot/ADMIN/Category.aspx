@@ -4,23 +4,33 @@
         .auto-style3 {
             margin-left: 375px;
         }
+    .auto-style4 {
+        margin-left: 381px;
+    }
+    .auto-style5 {
+        margin-left: 55px;
+    }
+        .auto-style6 {
+            margin-left: 422px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />&nbsp;
-            <asp:Label ID="LblCat" runat="server" Text="Category Name"></asp:Label>
-<asp:TextBox ID="CatName" runat="server" style="margin-left: 63px"></asp:TextBox>
+    <br />
+    <br />
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="LblCat" runat="server" Text="Category Name" ForeColor="Blue"></asp:Label>
+<asp:TextBox ID="CatName" runat="server" CssClass="auto-style5" Width="158px"></asp:TextBox>
 &nbsp;&nbsp;
             <asp:RequiredFieldValidator ID="CatReq" runat="server" ErrorMessage="Please Fill The Box" ForeColor="Red" ValidationGroup="a" ControlToValidate="CatName"></asp:RequiredFieldValidator>
-<br />
-<br />
-<asp:Button ID="Button1Save" runat="server" OnClick="Button1Save_Click" style="margin-left: 212px" Text="Save" ValidationGroup="a" />
-<br />
-<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
             <asp:Label ID="LabelMsg" runat="server" ForeColor="Red"></asp:Label>
 <br />
 <br />
-<asp:GridView ID="GridViewCat" runat="server" AutoGenerateColumns="False" DataKeyNames="Cat_Id" CssClass="auto-style3">
+<asp:Button ID="Button1Save" runat="server" OnClick="Button1Save_Click" Text="Save" ValidationGroup="a" CssClass="auto-style6" ForeColor="Blue" />
+<br />
+<br />
+<asp:GridView ID="GridViewCat" runat="server" AutoGenerateColumns="False" DataKeyNames="Cat_Id" CssClass="auto-style4" Caption="CATEGORIES" ForeColor="Blue">
     <Columns>
         <asp:BoundField DataField="Cat_Name" HeaderText="Category Name" />
         <asp:TemplateField HeaderText="Edit">
