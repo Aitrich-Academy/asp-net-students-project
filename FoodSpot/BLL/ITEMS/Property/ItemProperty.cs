@@ -47,6 +47,7 @@ namespace BLL.Admin.Property
         public string Cat_Name { get; set; }
 
         public string CheckBoxCancel { get; set; }
-  
+
+       
     }
 }
