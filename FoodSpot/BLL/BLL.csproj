@@ -41,9 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ADMIN\MANAGER\CatManager.cs" />
     <Compile Include="ADMIN\MANAGER\ViewRestaurant.cs" />
+    <Compile Include="ADMIN\PROPERTY\CategoryProperty.cs" />
     <Compile Include="ADMIN\PROPERTY\RestaurantProperty.cs" />
+    <Compile Include="ITEMS\Manager\ItemManager.cs" />
+    <Compile Include="ITEMS\Property\CategoryProperty.cs" />
+    <Compile Include="ITEMS\Property\ItemProperty.cs" />
+    <Compile Include="ITEMS\Property\RestaurantProperty.cs" />
+    <Compile Include="Manager\LoginManager.cs" />
+    <Compile Include="Manager\StartManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\LoginProperty.cs" />
+    <Compile Include="Services\MailServices.cs" />
+    <Compile Include="USER\Manager\UserRegManager.cs" />
+    <Compile Include="USER\Property\UserRegProperty.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

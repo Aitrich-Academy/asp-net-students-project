@@ -1,16 +1,16 @@
-﻿using System;
-using DAL;
-using BLL.CATEGORY.Property;
+﻿using BLL.ADMIN.PROPERTY;
+using project;
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Collections;
 
-namespace BLL.CATEGORY.Manager
+namespace BLL.ADMIN.MANAGER
 {
-    public class CategoryManager
+   public class CatManager
     {
         private DBhelper Db_obj = new DBhelper();
         public CategoryProperty Cat_pro = new CategoryProperty();
@@ -26,11 +26,11 @@ namespace BLL.CATEGORY.Manager
             DataTable dT = new DataTable();
             dT = Db_obj.getdatatable("SelectAllCategory");
             List<CategoryProperty> _list = new List<CategoryProperty>();
-            foreach(DataRow dR in dT.Rows)
+            foreach (DataRow dR in dT.Rows)
             {
                 _list.Add(new CategoryProperty
                 {
-                    Cat_Id =Convert.ToInt32(dR["Cat_Id"]),
+                    Cat_Id = Convert.ToInt32(dR["Cat_Id"]),
                     Cat_Name = dR["Cat_Name"].ToString(),
                     Cat_Staus = dR["Cat_Staus"].ToString()
                 });
@@ -48,9 +48,9 @@ namespace BLL.CATEGORY.Manager
         {
             Sort.Clear();
             Sort.Add("Cat_Id", Cat_pro.Cat_Id);
-            DataTable dT= new DataTable();
+            DataTable dT = new DataTable();
             dT = Db_obj.getdatatable(Sort, "SelectCategory");
-            if(dT.Rows.Count>0)
+            if (dT.Rows.Count > 0)
             {
                 Cat_pro.Cat_Name = dT.Rows[0].ItemArray[1].ToString();
             }
