@@ -1,4 +1,24 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoginMaster.master.cs" Inherits="FoodSpot.Login.LoginMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="signup_master.master.cs" Inherits="FOODSPOT.signup_master" %>
+
+<%--<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>--%>
+
+
 
 <!DOCTYPE html>
 
@@ -1854,7 +1874,7 @@ a:focus {
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                      <a href="Home.aspx" class="nav-item nav-link active">Home</a>
-                        <a href="/Customer/WebForm1.aspx" class="nav-item nav-link">Sign Up</a>
+                        <a href="/Login/login.aspx" class="nav-item nav-link">Log In</a>
                      
                         </div>
                  <%--       <a href="contact.html" class="nav-item nav-link">Contact</a>--%>
@@ -1923,4 +1943,5 @@ a:focus {
     </form>
 </body>
 </html>
+
 

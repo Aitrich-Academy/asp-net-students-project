@@ -1,12 +1,13 @@
-﻿using BLL.Admin;
+﻿
+
+using BLL.USER;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-namespace Foodspot
+namespace FOODSPOT
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
@@ -32,45 +33,42 @@ namespace Foodspot
         }
         public void Userinsert()
         {
-                UsrRegMngr_Obj.UsrRegPro_Obj.Cust_Name = TextName.Text.Trim().ToString();
-                UsrRegMngr_Obj.UsrRegPro_Obj.Cust_Email = TextEmail.Text.Trim().ToString();
-                UsrRegMngr_Obj.UsrRegPro_Obj.Phone_Number = TextNumber.Text.Trim().ToString();
-                UsrRegMngr_Obj.UsrRegPro_Obj.Address = TextAddress.Text.Trim().ToString();
-                UsrRegMngr_Obj.UsrRegPro_Obj.Pin_Code = TextPincode.Text.Trim().ToString();
-                UsrRegMngr_Obj.UsrRegPro_Obj.Cust_Password = TextPassword.Text.Trim().ToString();
-                string result = UsrRegMngr_Obj.StudentInsert();
-                TextName.Text = "";
-                HiddenField1.Value = "-1";
-                if (result == "Success")
-                {
+            UsrRegMngr_Obj.UsrRegPro_Obj.Cust_Name = TextName.Text.Trim().ToString();
+            UsrRegMngr_Obj.UsrRegPro_Obj.Cust_Email = TextEmail.Text.Trim().ToString();
+            UsrRegMngr_Obj.UsrRegPro_Obj.Phone_Number = TextNumber.Text.Trim().ToString();
+            UsrRegMngr_Obj.UsrRegPro_Obj.Address = TextAddress.Text.Trim().ToString();
+            UsrRegMngr_Obj.UsrRegPro_Obj.Pin_Code = TextPincode.Text.Trim().ToString();
+            UsrRegMngr_Obj.UsrRegPro_Obj.Cust_Password = TextPassword.Text.Trim().ToString();
+            string result = UsrRegMngr_Obj.StudentInsert();
+            TextName.Text = "";
+            HiddenField1.Value = "-1";
+            if (result == "Success")
+            {
 
-                    LabelMsg.Visible = true;
-                    LabelMsg.Text = "Inserted Successfully";
-                    Clear();
+                LabelMsg.Visible = true;
+                LabelMsg.Text = "Inserted Successfully";
+                Clear();
 
-                }
-                else if (result == "Already Exist")
-                {
-                    LabelMsg.Visible = true;
-                    LabelMsg.Text = "alreaddy Exist";
+            }
+            else if (result == "Already Exist")
+            {
+                LabelMsg.Visible = true;
+                LabelMsg.Text = "alreaddy Exist";
 
-                }
-                else if (result == "Error")
-                {
-                    LabelMsg.Visible = true;
-                    LabelMsg.Text = "failed due to error";
+            }
+            else if (result == "Error")
+            {
+                LabelMsg.Visible = true;
+                LabelMsg.Text = "failed due to error";
 
-                }
-                else
-                {
-                    LabelMsg.Visible = true;
-                    LabelMsg.Text = "failed due to some technical error";
-                }
+            }
+            else
+            {
+                LabelMsg.Visible = true;
+                LabelMsg.Text = "failed due to some technical error";
+            }
             UserBind();
-
-
         }
-
         public void Clear()
         {
             TextName.Text = "";

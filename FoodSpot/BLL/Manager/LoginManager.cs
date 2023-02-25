@@ -15,8 +15,8 @@ namespace BLL.Manager
         
         
             private DBhelper dbh = new DBhelper();
-            public LoginProperty logpro = new LoginProperty();
-            private SortedList S1 = new SortedList();
+        public LoginProperty logpro = new LoginProperty();
+        private SortedList S1 = new SortedList();
 
 
             public string Roleselect()
