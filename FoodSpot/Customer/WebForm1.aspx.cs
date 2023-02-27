@@ -31,6 +31,7 @@ namespace FOODSPOT
                 Userupdate();
             }
         }
+
         public void Userinsert()
         {
             UsrRegMngr_Obj.UsrRegPro_Obj.Cust_Name = TextName.Text.Trim().ToString();
