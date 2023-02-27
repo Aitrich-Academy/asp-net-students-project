@@ -24,15 +24,6 @@ namespace FOODSPOT
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// TextName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextName;
-
-        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -40,6 +31,15 @@ namespace FOODSPOT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblName;
+
+        /// <summary>
+        /// TextName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextName;
 
         /// <summary>
         /// RequiredFieldValidator1 control.
@@ -51,15 +51,6 @@ namespace FOODSPOT
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
-        /// TextNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextNumber;
-
-        /// <summary>
         /// lblPhone control.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace FOODSPOT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPhone;
+
+        /// <summary>
+        /// TextNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextNumber;
 
         /// <summary>
         /// RequiredFieldValidator7 control.
@@ -78,15 +78,6 @@ namespace FOODSPOT
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator7;
 
         /// <summary>
-        /// TextEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextEmail;
-
-        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,15 @@ namespace FOODSPOT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// TextEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextEmail;
 
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -105,15 +105,6 @@ namespace FOODSPOT
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// TextPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextPassword;
-
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -121,6 +112,15 @@ namespace FOODSPOT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
+        /// TextPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextPassword;
 
         /// <summary>
         /// RequiredFieldValidator3 control.
@@ -132,15 +132,6 @@ namespace FOODSPOT
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
 
         /// <summary>
-        /// TextAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextAddress;
-
-        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -148,6 +139,15 @@ namespace FOODSPOT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
+        /// TextAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextAddress;
 
         /// <summary>
         /// RequiredFieldValidator5 control.
@@ -159,15 +159,6 @@ namespace FOODSPOT
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
 
         /// <summary>
-        /// TextPincode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextPincode;
-
-        /// <summary>
         /// Label5 control.
         /// </summary>
         /// <remarks>
@@ -175,6 +166,15 @@ namespace FOODSPOT
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
+        /// TextPincode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextPincode;
 
         /// <summary>
         /// RequiredFieldValidator4 control.

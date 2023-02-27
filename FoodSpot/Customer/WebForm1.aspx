@@ -43,8 +43,8 @@
 
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="card">
-            <div class="card-body py-5 px-md-5">
-              <form>
+            <div class="card-body py-5 px-md-5" style ="padding-left:5px;">
+            <%--  <form>
                   <div>
                   <asp:Label ID="Label1" runat="server" Text="User Registration" Font-Size="XX-Large"></asp:Label>
                   </div>
@@ -53,9 +53,9 @@
                   <br />
 
                 <!-- Name input -->
-                <div class="form-outline mb-4">
-      <asp:TextBox ID="TextName" class="form-control" runat="server"></asp:TextBox>
-              <asp:Label ID="lblName" class="form-label" runat="server" BackColor="White" ForeColor="Black" Text="Name"></asp:Label>
+                <div class="form-outline mb-4 d-flex">
+              <asp:Label ID="lblName" class="form-label" runat="server" BackColor="White" ForeColor="Black" Text="Name"></asp:Label>&nbsp;&nbsp;&nbsp;
+                          <asp:TextBox ID="TextName" class="form-control mt-3" runat="server"></asp:TextBox>
       <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextName" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
                 </div>
 
@@ -80,14 +80,14 @@
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextPassword" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
                 </div>
 
-                   <!-- Password input -->
+                   <!-- Address input -->
                    <div class="form-outline mb-4">
                                            <asp:TextBox ID="TextAddress"  class="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
                                     <asp:Label ID="Label4" runat="server" class="form-label"  BackColor="White" ForeColor="Black" Text="Address"></asp:Label>
                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextAddress" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
                        </div>
 
-                   <!-- Password input -->
+                   <!-- Pincode input -->
                   <div class="form-outline mb-4">
                                     <asp:TextBox ID="TextPincode" class="form-control" runat="server"></asp:TextBox>
                                           <asp:Label ID="Label5" runat="server" class="form-label"  BackColor="White" ForeColor="Black" Text="Pincode"></asp:Label>
@@ -96,15 +96,82 @@
 
                   
 
-                <!-- Submit button -->
             
 
                   <div> 
-<%--                      <asp:Button ID="Button1" runat="server" class="btn btn-primary btn-block mb-4" <%--OnClick="Button1_Click"--%>
                         <asp:Button ID="Button1" runat="server" BackColor="#009933" ForeColor="#003300" class="btn btn-primary btn-block mb-4" OnClick="btnSubmit_Click" Text="Submit" ValidationGroup="a" style="height: 50px;Width:100px;margin-left:172px" />
-                  <asp:Label ID="LabelMsg" runat="server" BackColor="White" Visible ="false" ForeColor="#CC0000"></asp:Label>
+                  <asp:Label ID="LabelMsg" runat="server" BackColor="White" Visible ="false" ForeColor="#CC0000"></asp:Label></div>
+               
+              </form>--%>
+
+
+
+
+
+        
+
+                  <form>
+                  <div>
+                  <asp:Label ID="Label1" runat="server" Text="User Registration" Font-Size="XX-Large"></asp:Label>
+                  </div>
+                
+
+                  <br />
+
+                <!-- Name input -->
+                <div  class="form-outline mb-4">
+              &nbsp;&nbsp;
+              <asp:Label ID="lblName" class="form-label" runat="server" BackColor="White" ForeColor="Black" Text="Name" Font-Size="X-Large"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                          <asp:TextBox ID="TextName"  runat="server" Width="200px"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextName" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
+                </div>
+                      <div class="form-outline mb-4">
+     
+                          <asp:Label ID="lblPhone" runat="server" BackColor="White" ForeColor="Black" Text="Phone Number" Font-Size="X-Large"></asp:Label>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  
+                          <asp:TextBox ID="TextNumber"  runat="server" Width="200px"></asp:TextBox>
+                          <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextNumber" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
+                </div>
+                      
+                   <!-- Phone input -->
+                <div class="form-outline mb-4">
+                     <asp:Label ID="Label3" runat="server"  class="form-label" BackColor="White" ForeColor="Black" Text="Email" Font-Size="X-Large"></asp:Label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                        <asp:TextBox ID="TextEmail" runat="server" Width="200px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextEmail" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
+                </div>
+
+                   <!-- Password input -->
+                <div class="form-outline mb-4">
+                                        <asp:Label ID="Label2" runat="server" class="form-label" BackColor="White" ForeColor="Black" Text="Password" Font-Size="X-Large"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                                        <asp:TextBox ID="TextPassword" runat="server" TextMode="Password" Width="200px"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextPassword" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
+                </div>
+
+                   <!-- Address input -->
+                   <div class="form-outline mb-4">
+                                    <asp:Label ID="Label4" runat="server" class="form-label"  BackColor="White" ForeColor="Black" Text="Address" Font-Size="X-Large"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                                                                  <asp:TextBox ID="TextAddress" runat="server" TextMode="MultiLine" Width="200px"></asp:TextBox>
+                                           <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextAddress" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
+                       </div>
+
+                   <!-- Pincode input -->
+                  <div class="form-outline mb-4">
+                                          <asp:Label ID="Label5" runat="server" class="form-label"  BackColor="White" ForeColor="Black" Text="Pincode" Font-Size="X-Large"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                                          <asp:TextBox ID="TextPincode" runat="server" Width="200px"></asp:TextBox>
+                                          <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextPincode" ErrorMessage="*" ForeColor="Red" ValidationGroup="a"></asp:RequiredFieldValidator>
+                </div>
+
+                  
+
+            
+
+                  <div> 
+                        <asp:Button ID="Button1" runat="server" BackColor="#009933" ForeColor="#003300"  Font-Size="X-Large" class="btn btn-primary btn-block mb-4" OnClick="btnSubmit_Click" Text="Submit" ValidationGroup="a" style="height: 50px;Width:100px;margin-left:172px " />
+                  <asp:Label ID="LabelMsg" runat="server" BackColor="White" Visible ="false" ForeColor="#CC0000"></asp:Label></div>
                
               </form>
+            
             </div>
           </div>
         </div>
