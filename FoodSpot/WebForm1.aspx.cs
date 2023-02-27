@@ -22,6 +22,8 @@ namespace FoodSpot
                 if (id != null)
                 {
                     mng.proper.ID = int.Parse(id);
+                    hd.Value = (mng.proper.ID).ToString();
+                   // Session["idi"] = mng.proper.ID;
                     DataSet ds = new DataSet();
 
                     ds = mng.displaymenu1();
@@ -37,9 +39,6 @@ namespace FoodSpot
         protected void add_Click(object sender, EventArgs e)
         {
 
-
-
-
             if (Session["User"] != null)
             {
                 var button = sender as Button;
@@ -54,7 +53,7 @@ namespace FoodSpot
                 TextBox textbox = (TextBox)item.FindControl("TextBox1");
                 mng.bprop.Book_Quantity = int.Parse(textbox.Text);
                 //textbox.Text = count.ToString();
-                var res = mng.bookingquery(cust);
+                var res = mng.bookingquery(cust,hd.Value);
                 //mng.bprop.Book_Quantity=
             }
 
@@ -101,7 +100,7 @@ namespace FoodSpot
         }
         protected void checkout_Click(object sender, EventArgs e)
         {
-            //Response.Redirect/
+            Response.Redirect("~/Login/login.aspx");
         }
     }
 }

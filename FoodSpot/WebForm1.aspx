@@ -7,7 +7,7 @@
     <div style="width:60%;margin-left:250px;margin-top:100px;">
 
     <ul>
-
+        <asp:HiddenField ID="hd" runat="server" />
         <asp:Repeater ID="outerRep" runat="server" OnItemDataBound="outerRep_ItemDataBound" >
 
             <ItemTemplate>

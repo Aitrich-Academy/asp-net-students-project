@@ -92,7 +92,7 @@ namespace FoodSpot.ADMIN
 
 
                 string path = Server.MapPath(@"/Images/RestImage.jpg");
-                obj.FunctionForMail(path);
+                //obj.FunctionForMail(path);
 
 
                 string stat = obj.UpdateStatus();
