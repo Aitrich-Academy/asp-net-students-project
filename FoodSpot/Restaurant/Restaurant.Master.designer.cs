@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FoodSpot.ADMIN
+namespace FoodSpot.Restaurant
 {
 
 
-    public partial class AdminMaster
+    public partial class Restaurant
     {
 
         /// <summary>
@@ -33,13 +33,13 @@ namespace FoodSpot.ADMIN
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Image1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
         /// lnk1 control.
@@ -67,15 +67,6 @@ namespace FoodSpot.ADMIN
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnk3;
-
-        /// <summary>
-        /// ImageButton1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

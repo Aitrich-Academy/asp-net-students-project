@@ -36,13 +36,21 @@ namespace BLL.Manager
             }
 
        
-            public string selectlogid()
+            public string selectrestid()
             {
                 S1.Clear();
-                S1.Add("email", logpro.E_Mail);
-                S1.Add("password", logpro.Password);
-                return dbh.executeprocedure(S1, "selectlogid");
+                S1.Add("Restemail", logpro.E_Mail);
+                S1.Add("Restpassword", logpro.Password);
+                return dbh.executeprocedure(S1, "selectRestID");
             }
+
+        public string selectlogid()
+        {
+            S1.Clear();
+            S1.Add("email", logpro.E_Mail);
+            S1.Add("password", logpro.Password);
+            return dbh.executeprocedure(S1, "selectlogid");
+        }
 
     }
 }

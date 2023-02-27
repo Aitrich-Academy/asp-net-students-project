@@ -5,23 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace FoodSpot.ADMIN
+namespace FoodSpot.Restaurant
 {
-    public partial class AdminMaster : System.Web.UI.MasterPage
+    public partial class Restaurant : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
         }
 
-        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        protected void lnk2_Click(object sender, EventArgs e)
         {
-
-            Session.Abandon();
-            Session.Clear();
             Response.Redirect("~/Login/login.aspx");
         }
-        
     }
 }

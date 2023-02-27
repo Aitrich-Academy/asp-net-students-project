@@ -1,16 +1,16 @@
 ﻿using BLL.Admin.Manager;
 using BLL.Admin.Property;
 using System;
-using System.Data;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Food_Mgmt_System
+namespace FoodSpot.Restaurant
 {
-    public partial class itemsList : System.Web.UI.Page
+    public partial class WebForm1 : System.Web.UI.Page
     {
         ItemManager itemMngr_obj = new ItemManager();
         ItemProperty itemProp_obj = new ItemProperty();
@@ -20,10 +20,22 @@ namespace Food_Mgmt_System
         {
             if (Page.IsPostBack == false)
             {
+                string id = Request.QueryString["id"].ToString();
+              //  Session["rid"] = id;
+                hd.Value= id;
                 Labelmsg.Visible = false;
                 BindGrid();
                 ViewAllCategory();
+                ViewAllSearchCategory();
             }
+        }
+
+        void ViewAllSearchCategory()
+        {
+            DropDownListSearch.DataSource = itemMngr_obj.SelectAllCategory();
+            DropDownListSearch.DataTextField = "Cat_Name";
+            DropDownListSearch.DataValueField = "Cat_Id";
+            DropDownListSearch.DataBind();
         }
 
         void ViewAllCategory()
@@ -35,20 +47,26 @@ namespace Food_Mgmt_System
         }
         void BindGrid()
         {
+            itemMngr_obj.itemProp_Obj.Rest_Id=int.Parse(hd.Value);
             GridView1.DataSource = itemMngr_obj.SelectAllItems();
             GridView1.DataBind();
         }
 
         protected void ButtonSave_Click(object sender, EventArgs e)
         {
-            if (HiddenField1.Value == "-1")
+            if (Page.IsValid == true)
             {
-                ItemInsert();
+                if (HiddenField1.Value == "-1")
+                {
+                    ItemInsert();
+                }
+                else
+                {
+                    ItemUpdate();
+                }
             }
-            else
-            {
-                ItemUpdate();
-            }
+            
+          
 
         }
 
@@ -69,12 +87,12 @@ namespace Food_Mgmt_System
                 itemMngr_obj.itemProp_Obj.Description = TextBoxDescription.Text.Trim();
 
                 string result = itemMngr_obj.UpdateItem();
-                if(result== "Success")
+                if (result == "Success")
                 {
                     Labelmsg.Visible = true;
                     Labelmsg.Text = "Updated Successfully";
                 }
-                else if(result== "Error")
+                else if (result == "Error")
                 {
                     Labelmsg.Visible = true;
                     Labelmsg.Text = "Error";
@@ -84,12 +102,12 @@ namespace Food_Mgmt_System
                     Labelmsg.Visible = true;
                     Labelmsg.Text = "Failed due to Some Technical Error";
                 }
-             
+
                 itemMngr_obj.itemProp_Obj.Item_Name = "";
                 //itemMngr_obj.itemProp_Obj.Item_Price =int.Parse("");
                 itemMngr_obj.itemProp_Obj.Image = "-1";
                 itemMngr_obj.itemProp_Obj.Description = "";
-                
+
             }
             BindGrid();
         }
@@ -100,41 +118,45 @@ namespace Food_Mgmt_System
             {
                 string filename = getRandomText();
 
-                FileUpload1.SaveAs(Server.MapPath("~/images/" + filename +".jpg" ));
+                FileUpload1.SaveAs(Server.MapPath("~/images/" + filename + ".jpg"));
 
-        
+
                 itemMngr_obj.itemProp_Obj.Image = "~/images/" + filename + ".jpg";
-                itemMngr_obj.itemProp_Obj.Cat_Id =int.Parse( DropDownListCategory.SelectedValue.Trim());
+                itemMngr_obj.itemProp_Obj.Cat_Id = int.Parse(DropDownListCategory.SelectedValue.Trim());
                 itemMngr_obj.itemProp_Obj.Item_Name = TextBoxName.Text.Trim();
-                itemMngr_obj.itemProp_Obj.Item_Price = Convert.ToInt32( TextBoxPrice.Text.Trim());
+                itemMngr_obj.itemProp_Obj.Item_Price = Convert.ToInt32(TextBoxPrice.Text.Trim());
                 itemMngr_obj.itemProp_Obj.Description = TextBoxDescription.Text.Trim();
+                itemMngr_obj.itemProp_Obj.Rest_Id =Convert.ToInt32(Session["id"]);
+                //Session["Rest"] = "qqq";
 
                 string result = itemMngr_obj.InsertItem();
                 HiddenField1.Value = "-1";
-                 if (result == "Success")
+                if (result == "Success")
                 {
-                    Labelmsg.Visible = true;
-                    Labelmsg.Text = "Inserted Successfully";
+                    Response.Write("<script language=javascript>alert(\' Registered Successfully. ' ) </script>");
+
+                    //Labelmsg.Visible = true;
+                    //Labelmsg.Text = "Inserted Successfully";
                 }
-               else if (result == "Already Exist")
+                else if (result == "Already Exist")
                 {
                     Labelmsg.Visible = true;
                     Labelmsg.Text = "Already Exist";
                 }
-           
-       
+
+
                 else if (result == "Error")
                 {
                     Labelmsg.Visible = true;
                     Labelmsg.Text = "Error";
                 }
-               
+
                 else
                 {
                     Labelmsg.Visible = true;
                     Labelmsg.Text = "Failed due to Some Technical Error";
                 }
-               
+
                 itemMngr_obj.itemProp_Obj.Item_Name = "";
                 //itemMngr_obj.itemProp_Obj.Item_Price =int.Parse("");
                 itemMngr_obj.itemProp_Obj.Image = "-1";
@@ -149,7 +171,7 @@ namespace Food_Mgmt_System
             string alphabets = "0123456789";
 
             Random r = new Random();
-            for(int i = 1; i <= 6; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 randomtext += alphabets[r.Next(alphabets.Length)];
             }
@@ -176,15 +198,16 @@ namespace Food_Mgmt_System
 
         public void selectById()
         {
-            itemMngr_obj.itemProp_Obj.Item_Id = int.Parse( HiddenField1.Value);
+            itemMngr_obj.itemProp_Obj.Item_Id = int.Parse(HiddenField1.Value);
             itemMngr_obj.SelectItemById();
 
+            DropDownListCategory.SelectedValue = itemMngr_obj.itemProp_Obj.Cat_Id.ToString();
             TextBoxName.Text = itemMngr_obj.itemProp_Obj.Item_Name;
             TextBoxPrice.Text = itemMngr_obj.itemProp_Obj.Item_Price.ToString();
             TextBoxDescription.Text = itemMngr_obj.itemProp_Obj.Description;
         }
 
-      
+
         protected void ImageButton2_Click1(object sender, ImageClickEventArgs e)
         {
             ImageButton imgbutton = sender as ImageButton;
@@ -195,10 +218,10 @@ namespace Food_Mgmt_System
 
         public void ItemDelete()
         {
-            itemMngr_obj.itemProp_Obj.Item_Id = int.Parse( HiddenField1.Value);
+            itemMngr_obj.itemProp_Obj.Item_Id = int.Parse(HiddenField1.Value);
             string result = itemMngr_obj.DeleteItem();
             HiddenField1.Value = "-1";
-            if(result== "Success")
+            if (result == "Success")
             {
                 Labelmsg.Visible = true;
                 Labelmsg.Text = "Deleted Succesfully";
@@ -214,6 +237,16 @@ namespace Food_Mgmt_System
                 Labelmsg.Text = "Failed due to technical error";
             }
             BindGrid();
+        }
+
+        protected void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            itemMngr_obj.itemProp_Obj.Cat_Id = Convert.ToInt32(DropDownListSearch.SelectedValue);
+            dt = itemMngr_obj.SearchItemsByCategory();
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+           
         }
     }
 }
