@@ -23,11 +23,11 @@ namespace BLL.Manager
             return dt;
         }
 
-        //public string displaymenu()
-        //{
-        //    S1.Clear();
-        //    S1.Add("Rest_Id", prop.ID);         
-        //    return dbh.executeprocedure(S1, "displaymenu");
-        //}
+        public string displaymenu()
+        {
+            S1.Clear();
+            S1.Add("Rest_Id", prop.ID);         
+            return dbh.executeprocedure(S1, "displaymenu");
+        }
     }
 }
