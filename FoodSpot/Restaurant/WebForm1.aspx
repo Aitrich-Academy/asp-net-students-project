@@ -74,7 +74,7 @@
            ITEMS 
           </div>
           <div class="card-body">
-    
+              <asp:HiddenField ID="hd" runat="server" />
 
                                   <table align="center" class="w-100">
                 <tr>

@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BLL.Admin.Manager;
 using BLL.Manager;
 
 namespace FoodSpot.Login
 {
     public partial class login : System.Web.UI.Page
     {
+        ItemManager itemMngr=new ItemManager();
         LoginManager lmg = new LoginManager();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +23,9 @@ namespace FoodSpot.Login
             lmg.logpro.E_Mail = txtemail.Text.Trim().ToString();
             lmg.logpro.Password = txtpassword.Text.Trim().ToString();
             string result = lmg.Roleselect();
-            lmg.logpro.log_Id = int.Parse(lmg.selectlogid());
+            //lmg.logpro.log_Id = int.Parse(lmg.selectlogid());
+            itemMngr.itemProp_Obj.Rest_Id = int.Parse(lmg.selectrestid());
+
 
             Session["custid"] = lmg.selectlogid();
 
@@ -36,7 +40,7 @@ namespace FoodSpot.Login
             else if (result == "R")
             {
                 Session["Email"] = txtemail.Text;
-                Response.Redirect("~/WebForm1.aspx");
+                Response.Redirect("~/Restaurant/WebForm1.aspx?id=" + itemMngr.itemProp_Obj.Rest_Id);
             }
             else
             {

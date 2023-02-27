@@ -22,6 +22,13 @@ namespace BLL.Admin.Manager
         public SortedList s1 = new SortedList();
         public object itemProp_obj;
 
+        public string selectlogid()
+        {
+            s1.Clear();
+            s1.Add("Restemail", itemProp_Obj.Rest_Email);
+            s1.Add("Restpassword", itemProp_Obj.Rest_Password);
+            return DB_Obj.executeprocedure(s1, "selectRestID");
+        }
         public List<ItemProperty> selectAllBookings()
         {
             s1.Clear();
@@ -89,7 +96,8 @@ namespace BLL.Admin.Manager
         public List<ItemProperty> SelectAllItems()
         {
             DataTable dt = new DataTable();
-            dt = DB_Obj.getdatatable("sp_SelectAllItems");
+            s1.Add("id", itemProp_Obj.Rest_Id);
+            dt = DB_Obj.getdatatable(s1,"sp_SelectAllItems");
             List<ItemProperty> list = new List<ItemProperty>();
 
             foreach(DataRow dr in dt.Rows)
