@@ -20,6 +20,9 @@ namespace FoodSpot.Restaurant
         {
             if (Page.IsPostBack == false)
             {
+                string id = Request.QueryString["id"].ToString();
+              //  Session["rid"] = id;
+                hd.Value= id;
                 Labelmsg.Visible = false;
                 BindGrid();
                 ViewAllCategory();
@@ -44,6 +47,7 @@ namespace FoodSpot.Restaurant
         }
         void BindGrid()
         {
+            itemMngr_obj.itemProp_Obj.Rest_Id=int.Parse(hd.Value);
             GridView1.DataSource = itemMngr_obj.SelectAllItems();
             GridView1.DataBind();
         }
@@ -122,8 +126,8 @@ namespace FoodSpot.Restaurant
                 itemMngr_obj.itemProp_Obj.Item_Name = TextBoxName.Text.Trim();
                 itemMngr_obj.itemProp_Obj.Item_Price = Convert.ToInt32(TextBoxPrice.Text.Trim());
                 itemMngr_obj.itemProp_Obj.Description = TextBoxDescription.Text.Trim();
-
-                Session["Rest"] = "qqq";
+                itemMngr_obj.itemProp_Obj.Rest_Id =Convert.ToInt32(Session["id"]);
+                //Session["Rest"] = "qqq";
 
                 string result = itemMngr_obj.InsertItem();
                 HiddenField1.Value = "-1";

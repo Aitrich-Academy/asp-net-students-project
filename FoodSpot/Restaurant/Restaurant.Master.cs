@@ -16,7 +16,7 @@ namespace FoodSpot.Restaurant
 
         protected void lnk2_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Login/login.aspx");
         }
     }
 }

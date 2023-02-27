@@ -16,6 +16,7 @@ namespace BLL.Admin.Property
 
         public int Rest_Id { get; set; }
 
+        public string Rest_Password { get; set; }
         public object CheckBoxDeliver { get; private set; }
 
         public string Rest_Email { get; set; }
