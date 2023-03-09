@@ -5,7 +5,7 @@
 
 
     <div style="width:60%;margin-left:250px;margin-top:100px;">
-
+         <asp:HiddenField ID="hdrest_id" runat="server" />
     <ul>
 
         <asp:Repeater ID="outerRep" runat="server" OnItemDataBound="outerRep_ItemDataBound" >
@@ -21,13 +21,13 @@
                 </li>
 
                 <ul>
+                           
 
                 <asp:Repeater ID="innerRep" runat="server">
 
                     <ItemTemplate>
 
                         <li style="background-color: AliceBlue">
-
 
 
                             <asp:HyperLink ID="hlProductName" runat="server" Text='<%# Eval("Item_Name")%>' />

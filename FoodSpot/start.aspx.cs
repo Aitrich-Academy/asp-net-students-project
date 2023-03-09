@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using project;
+//using project;
 using BLL.Manager;
 
 namespace FoodSpot
