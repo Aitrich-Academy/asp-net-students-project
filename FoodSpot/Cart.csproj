@@ -8,16 +8,16 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{62FA8D24-7192-4F6E-9E2F-F57952210FA0}</ProjectGuid>
+    <ProjectGuid>{468673AD-3623-4A02-A36C-C5CD7B52E4C6}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FoodSpot</RootNamespace>
-    <AssemblyName>FoodSpot</AssemblyName>
+    <RootNamespace>Cart</RootNamespace>
+    <AssemblyName>Cart</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressSSLPort>44322</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -61,9 +61,9 @@
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="AspNet.ScriptManager.bootstrap">
       <HintPath>packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
@@ -105,10 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ADMIN\AddRestaurant.aspx" />
-    <Content Include="ADMIN\Category.aspx" />
-    <Content Include="ADMIN\ListRestaurannts.aspx" />
-    <Content Include="cart\WebForm1.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -126,31 +124,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="ADMIN\AdminMaster.Master" />
-    <Content Include="Images\19-194832_oojs-ui-icon-logout-ltr-progressive-blue-logout.png" />
-    <Content Include="Images\276902.jpg" />
-    <Content Include="Images\489359.jpg" />
-    <Content Include="Images\509361.jpg" />
-    <Content Include="Images\deleteicon.jpg" />
-    <Content Include="Images\delivery-service-urban-landscape-phone-screen-young-man-courier-delivering-pizza_213110-1440.jpg" />
-    <Content Include="Images\editimage.jpg" />
-    <Content Include="Images\RestImage.jpg" />
-    <Content Include="Images\stock.jpg" />
-    <Content Include="Login\LoginMaster.Master" />
-    <Content Include="Menu.aspx" />
-    <Content Include="Restaurant\ItemList1.aspx" />
-    <Content Include="Restaurant\ViewOrders.aspx" />
-    <Content Include="Restaurant\WebForm1.aspx" />
-    <Content Include="start.aspx" />
-    <Content Include="style.css" />
+    <Content Include="image\24acbb7530fb22151d3f3f1581fb947d.png" />
+    <Content Include="image\alfahm.jfif" />
+    <Content Include="image\oonu.jpg" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="Restaurant\Restaurant.Master" />
-    <Content Include="masterpage.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Login\Home.aspx" />
-    <Content Include="Login\login.aspx" />
-    <Content Include="MAsterPAgeDesign\Site1.Master" />
-    <Content Include="MAsterPAgeDesign\Site2.Master" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -186,42 +164,21 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADMIN\AddRestaurant.aspx.cs">
-      <DependentUpon>AddRestaurant.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ADMIN\AddRestaurant.aspx.designer.cs">
-      <DependentUpon>AddRestaurant.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ADMIN\AdminMaster.Master.cs">
-      <DependentUpon>AdminMaster.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ADMIN\AdminMaster.Master.designer.cs">
-      <DependentUpon>AdminMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="ADMIN\Category.aspx.cs">
-      <DependentUpon>Category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ADMIN\Category.aspx.designer.cs">
-      <DependentUpon>Category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ADMIN\ListRestaurannts.aspx.cs">
-      <DependentUpon>ListRestaurannts.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ADMIN\ListRestaurannts.aspx.designer.cs">
-      <DependentUpon>ListRestaurannts.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="cart\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cart\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -233,81 +190,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login\Home.aspx.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login\Home.aspx.designer.cs">
-      <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login\LoginMaster.Master.cs">
-      <DependentUpon>LoginMaster.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login\LoginMaster.Master.designer.cs">
-      <DependentUpon>LoginMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="masterpage.Master.cs">
-      <DependentUpon>masterpage.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="masterpage.Master.designer.cs">
-      <DependentUpon>masterpage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="MAsterPAgeDesign\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MAsterPAgeDesign\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="MAsterPAgeDesign\Site2.Master.cs">
-      <DependentUpon>Site2.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MAsterPAgeDesign\Site2.Master.designer.cs">
-      <DependentUpon>Site2.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Menu.aspx.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Menu.aspx.designer.cs">
-      <DependentUpon>Menu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Restaurant\ItemList1.aspx.cs">
-      <DependentUpon>ItemList1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Restaurant\Restaurant.Master.cs">
-      <DependentUpon>Restaurant.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Restaurant\Restaurant.Master.designer.cs">
-      <DependentUpon>Restaurant.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Restaurant\ViewOrders.aspx.cs">
-      <DependentUpon>ViewOrders.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Restaurant\ViewOrders.aspx.designer.cs">
-      <DependentUpon>ViewOrders.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Restaurant\WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Restaurant\WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,13 +204,6 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
-    <Compile Include="start.aspx.cs">
-      <DependentUpon>start.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="start.aspx.designer.cs">
-      <DependentUpon>start.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -359,9 +235,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="BLL\BLL.csproj">
-      <Project>{50242ba2-4fe2-4395-8b75-3cb1e268613c}</Project>
-      <Name>BLL</Name>
+    <ProjectReference Include="..\B LL\B LL.csproj">
+      <Project>{4fe3d220-ee6b-4574-acb8-863f6ee65929}</Project>
+      <Name>B LL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -377,9 +253,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60043</DevelopmentServerPort>
+          <DevelopmentServerPort>61431</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44375/</IISUrl>
+          <IISUrl>https://localhost:44322/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

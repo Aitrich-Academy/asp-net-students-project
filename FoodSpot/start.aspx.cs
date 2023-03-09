@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using project;
+//using project;
 using BLL.Manager;
 
 namespace FoodSpot
@@ -41,7 +41,8 @@ namespace FoodSpot
             var hfield = dataListItem.FindControl("hfield") as HiddenField;
             string s1 = hfield.Value;
             srt.prop.ID = int.Parse(s1);
-            Response.Redirect("menu.aspx?id=" + s1);
+            //Response.Redirect("menu.aspx?id=" + s1);
+            Response.Redirect("webform1.aspx?id=" + s1);
         }
 
         

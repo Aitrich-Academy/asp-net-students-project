@@ -6,7 +6,7 @@
         <title>Burger King - Food Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description"></title>  
+        <meta content="Free Website Template" name="description"></title> 
 
         <link rel="stylesheet" type="text/css" href="style.css" /> 
 
@@ -54,7 +54,7 @@
             <br />
             <br />
                
-            <asp:DataList ID="DataList1" runat="server" RepeatColumns="8">
+            <asp:DataList ID="DataList1" runat="server" RepeatColumns="8" Width="1191px">
 
 
             <ItemTemplate><div class="container">
